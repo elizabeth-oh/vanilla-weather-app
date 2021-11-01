@@ -7,10 +7,144 @@
     <title>Document</title>
     <link rel="stylesheet" href="src/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/8b62cde17a.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Weather App</h1>
+        <div class="weatherApp">
+            <form>
+                <div class="row">
+                    <div class="col-9">
+                        <input type="search" class="form-control search-input" placeholder="Look for a city...">
+                    </div>
+                    <div class="col-3">
+                        <input type="submit" class="btn btn-primary w-100" value="Search">
+                    </div>
+                </div>
+            </form>
+            <hr />
+            <div class="row currentWeather">
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col">
+                        <h1>New York</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                        <ul>
+                            <li>
+                            Monday 13:30
+                            </li>
+                            <li>
+                                Overcast, clouds
+                            </li>
+                            <li>
+                                Humidity: 75%
+                            </li>
+                            <li>
+                                Wind: 4.12km/h
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 currentIcon">
+                        <img class=currentIcon
+                        src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
+                        alt="Current weather icon"
+                        >
+                </div>
+                <div class="col-3">
+                    <h2>12°C</h2>
+                </div>
+            </div>
+            <div class="row weatherForecast">
+                <div class="col">
+                    <div class="dayOfWeek">
+                        MON
+                    </div>
+                    <div class="forecastIcon">
+                        <img
+                        src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
+                        alt="Current weather icon"
+                        >
+                    </div>
+                    <div class="forecastTemperatures">
+                        <span class=forecastHigh>12</span>
+                        <span class=forecastLow>5</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="dayOfWeek">
+                        TUE
+                    </div>
+                    <div class="forecastIcon">
+                        <img
+                        src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
+                        alt="Current weather icon"
+                        >
+                    </div>
+                    <div class="forecastTemperatures">
+                        <span class=forecastHigh>12</span>
+                        <span class=forecastLow>5</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="dayOfWeek">
+                        WED
+                    </div>
+                    <div class="forecastIcon">
+                        <img
+                        src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
+                        alt="Current weather icon"
+                        >
+                    </div>
+                    <div class="forecastTemperatures">
+                        <span class=forecastHigh>12</span>
+                        <span class=forecastLow>5</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="dayOfWeek">
+                        THU
+                    </div>
+                    <div class="forecastIcon">
+                        <img
+                        src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
+                        alt="Current weather icon"
+                        >
+                    </div>
+                    <div class="forecastTemperatures">
+                        <span class=forecastHigh>12</span>
+                        <span class=forecastLow>5</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="dayOfWeek">
+                        FRI
+                    </div>
+                    <div class="forecastIcon">
+                        <img
+                        src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
+                        alt="Current weather icon"
+                        >
+                    </div>
+                    <div class="forecastTemperatures">
+                        <span class=forecastHigh>12</span>
+                        <span class=forecastLow>5</span>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <small class="sourceCode">
+                <a href="https://github.com/elizabeth-oh/vanilla-weather-app" 
+                   target="_blank">
+                   Open-source code
+                </a> 
+                by Elizabeth Oh
+            </small>
+        </div>
     </div>
     <script src="src/app.js"></script>
 </body>
