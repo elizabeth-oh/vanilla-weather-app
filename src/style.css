@@ -11,7 +11,7 @@ h2 {
 }
 
 .weatherAppWrapper {
-    background-color: #f0ebdc;
+    background-color: #F6E6CB;
     padding: 20px 20px;
     border-radius: 20px;
 }
@@ -21,6 +21,22 @@ h2 {
     height: 100px;
 }
 
-.btn {
-    background-color: #23059D;
+.searchForm {
+    background: #E7D4B5;
+    border-color: #E3CDC1;
+}
+
+.form-control:focus {
+    border-color: #F6E6CB;
+    box-shadow: 0 0 0 0.2rem rgba(196, 127, 23, 0.25)
+}
+
+.searchButton {
+    color: #F6E6CB;
+    background: #A0937D;
+    border-style: none;
+}
+
+.searchButton:hover{
+    background: #E3CDC1;
 }
