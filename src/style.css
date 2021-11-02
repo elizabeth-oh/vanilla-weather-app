@@ -1,7 +1,40 @@
+h1 {
+    font-weight: 800;
+}
+
 h2 {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: normal;
+   display:inline-block;
+   position: relative;
+   top: 40px;
+   font-size: 80px;
+}
+
+ul {
+    list-style: none;
+}
+
+hr {
+    height: 0.3px;
+}
+
+.currentWeather img{
+    height: 125px;
+    width: 125px;
+    padding-right: 15px;
+    position: relative; 
+    top: 25px;
+}
+
+.units {
+    font-size: 15px;
+    position: relative;
+    top: -15px
+}
+
+.currentTime {
+    font-weight: 100;
+    position: relative;
+    top: -10px; left: -31px;
 }
 
 .weatherApp {
@@ -14,6 +47,7 @@ h2 {
     background-color: #F6E6CB;
     padding: 20px 20px;
     border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .currentIcon img {
@@ -24,19 +58,21 @@ h2 {
 .searchForm {
     background: #E7D4B5;
     border-color: #E3CDC1;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
 }
 
 .form-control:focus {
     border-color: #F6E6CB;
-    box-shadow: 0 0 0 0.2rem rgba(196, 127, 23, 0.25)
+    box-shadow: 0 0 0 0.2rem rgba(246, 230, 203, 0.25)
 }
 
 .searchButton {
     color: #F6E6CB;
     background: #A0937D;
     border-style: none;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
-.searchButton:hover{
+.searchButton:hover {
     background: #E3CDC1;
 }
