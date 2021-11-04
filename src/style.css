@@ -44,6 +44,7 @@ hr {
 }
 
 .weatherAppWrapper {
+    color: rgb(75, 68, 68);
     background-color: #F6E6CB;
     padding: 20px 20px;
     border-radius: 20px;
@@ -75,4 +76,20 @@ hr {
 
 .searchButton:hover {
     background: #E3CDC1;
+}
+
+.dailyForecastWrapper {
+    text-align: center;
+    background: #E3CDC1;
+    padding: 3px 3px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+
+.dayOfWeek {
+    font-weight: bolder;
+}
+
+.forecastHigh {
+    font-weight: bolder;
 }
