@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossor igin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8b62cde17a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -31,7 +32,7 @@
                 <div class="col-6">
                     <div class="row">
                         <div class="col">
-                        <h1>New York</h1>
+                        <h1 id="city">New York</h1>
                         </div>
                     </div>
                     <div class="row">
@@ -40,14 +41,14 @@
                             <li class="currentTime">
                             Monday 13:30
                             </li>
-                            <li>
+                            <li id = currentWeatherDesc>
                                 Overcast
                             </li>
                             <li>
-                                Humidity: 75%
+                                Humidity: <span id=humidity></span>%
                             </li>
                             <li>
-                                Wind: 4.12km/h
+                                Wind: <span id=wind></span>km/h
                             </li>
                         </ul>
                         </div>
@@ -60,7 +61,7 @@
                         >
                 </div>
                 <div class="col-3">
-                    <h2 class=currentTemp>12</h2>
+                    <h2 class=currentTemp id=currentTemp>12</h2>
                     <span class=units>
                         °C | <a href="#">°F</a>
                     </span>

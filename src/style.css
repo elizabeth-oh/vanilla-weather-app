@@ -17,6 +17,10 @@ hr {
     height: 0.3px;
 }
 
+a {
+    text-decoration: none;
+}
+
 .currentWeather img{
     height: 125px;
     width: 125px;
@@ -98,4 +102,8 @@ hr {
     font-size: x-small;
     position: relative;
     left: 10px;
+}
+
+#currentWeatherDesc {
+    text-transform: capitalize;
 }
