@@ -23,6 +23,8 @@ function displayWeather(response) {
     let currentTimeElement = document.querySelector("#currentTime");
     let currentIconElement = document.querySelector("#currentIcon");
 
+    celsiusTemp = response.data.main.temp;
+
     cityElement.innerHTML = response.data.name;
     currentTempElement.innerHTML = Math.round(response.data.main.temp);
     currentWeatherDescElement.innerHTML = response.data.weather[0].description;
@@ -47,7 +49,33 @@ function handleSubmit(event) {
     search (cityInput);
 }
 
-search("paris");
+function displayFahrenheitTemp(event) {
+    event.preventDefault();
+    let currentTempElement = document.querySelector("#currentTemp");
+    currentTempElement.innerHTML = Math.round((celsiusTemp * 9/5) + 32);
+
+    celsiusLinkElement.classList.remove("activeUnit");
+    fahrenheitLinkElement.classList.add("activeUnit");
+}
+
+function displayCelsiusTemp(event) {
+    event.preventDefault();
+    let currentTempElement = document.querySelector("#currentTemp");
+    currentTempElement.innerHTML = Math.round(celsiusTemp);
+
+    celsiusLinkElement.classList.add("activeUnit");
+    fahrenheitLinkElement.classList.remove("activeUnit");
+}
+
+let celsiusTemp = null;
 
 let formElement = document.querySelector("#search-form");
 formElement.addEventListener("submit", handleSubmit)
+
+let fahrenheitLinkElement = document.querySelector("#fahrenheit-link");
+fahrenheitLinkElement.addEventListener("click", displayFahrenheitTemp);
+
+let celsiusLinkElement = document.querySelector("#celsius-link");
+celsiusLinkElement.addEventListener("click", displayCelsiusTemp);
+
+search("paris");
