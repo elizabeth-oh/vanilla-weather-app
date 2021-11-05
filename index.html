@@ -17,10 +17,10 @@
     <div class="container">
         <div class="weatherApp">
         <div class="weatherAppWrapper">
-            <form>
+            <form id="search-form">
                 <div class="row">
                     <div class="col-9">
-                        <input type="search" class="searchForm form-control search-input" placeholder="Look for a city...">
+                        <input type="search" class="searchForm form-control search-input" id="city-input" placeholder="Look for a city...">
                     </div>
                     <div class="col-3">
                         <input type="submit" class="searchButton btn btn-primary w-100" value="Search">
@@ -32,7 +32,7 @@
                 <div class="col-6">
                     <div class="row">
                         <div class="col">
-                        <h1 id="city">New York</h1>
+                        <h1 id="city"></h1>
                         </div>
                     </div>
                     <div class="row">

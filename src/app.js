@@ -33,10 +33,21 @@ function displayWeather(response) {
     currentIconElement.setAttribute("alt",`${response.data.weather[0].description}`);
 }
 
-let apiKey = "2465cf67c79b581f012f9a417fbb141d"
-let city = "Paris"
-let units = "metric"
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`
+function search(city) {
+    let apiKey = "2465cf67c79b581f012f9a417fbb141d";
+    let units = "metric";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 
-axios.get(apiUrl).then(displayWeather)
+    axios.get(apiUrl).then(displayWeather);
+}
 
+function handleSubmit(event) {
+    event.preventDefault();
+    let cityInput = document.querySelector("#city-input").value;
+    search (cityInput);
+}
+
+search("paris");
+
+let formElement = document.querySelector("#search-form");
+formElement.addEventListener("submit", handleSubmit)
