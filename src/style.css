@@ -50,7 +50,7 @@ a {
 }
 
 .weatherAppWrapper {
-    color: rgb(75, 68, 68);
+    color: rgb(70, 60, 60);
     background-color: #F6E6CB;
     padding: 20px 20px;
     border-radius: 20px;
@@ -87,7 +87,7 @@ a {
     background: #E3CDC1;
 }
 
-.dailyForecastWrapper {
+.dailyForecast {
     text-align: center;
     background: #E3CDC1;
     padding: 3px 3px;
@@ -95,13 +95,21 @@ a {
     box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
 }
 
-.dayOfWeek {
+.forecastDay {
     font-weight: bolder;
 }
 
-.forecastHigh {
-    font-weight: bolder;
+.forecastLow {
+    opacity: 0.6;
+    padding: 3px;
+    text-align: center;
 }
+
+.forecastLow {
+    padding: 3px;
+    text-align: center;
+}
+
 
 .sourceCode {
     font-size: x-small;

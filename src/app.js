@@ -14,6 +14,40 @@ function formatDate(timestamp){
     return `${day} ${hours}:${minutes}`
 }
 
+function displayForecast(day) {
+    let forecastElement = document.querySelector("#weatherForecast");
+    
+    let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+
+    let forecastHTML = `<div class="row">`;
+    
+    days.forEach(function(day) {
+        forecastHTML = forecastHTML +
+        `<div class="col">
+                    <div class="dailyForecast">
+                        <div class="forecastDay">
+                            ${day}
+                        </div>
+                        <div class="forecastIcon">
+                            <img
+                            src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
+                            alt="Current weather icon"
+                            >
+                        </div>
+                        <div class="forecastTemperatures">
+                            <span class=forecastHigh>12</span>
+                            <span class=forecastLow>5</span>
+                        </div>
+                    </div>
+                </div>`;
+    });
+
+    forecastHTML = forecastHTML + `</div>`;
+    forecastElement.innerHTML = forecastHTML;
+    console.log(forecastHTML);
+
+}
+
 function displayWeather(response) {
     let cityElement = document.querySelector("#city");
     let currentTempElement = document.querySelector("#currentTemp");
@@ -46,6 +80,8 @@ function search(city) {
 function handleSubmit(event) {
     event.preventDefault();
     let cityInput = document.querySelector("#city-input").value;
+    celsiusLinkElement.classList.add("activeUnit");
+    fahrenheitLinkElement.classList.remove("activeUnit");
     search (cityInput);
 }
 
@@ -79,3 +115,4 @@ let celsiusLinkElement = document.querySelector("#celsius-link");
 celsiusLinkElement.addEventListener("click", displayCelsiusTemp);
 
 search("paris");
+displayForecast();
