@@ -14,7 +14,7 @@ function formatDate(timestamp){
     return `${day} ${hours}:${minutes}`
 }
 
-function displayForecast(day) {
+function displayForecast(response) {
     let forecastElement = document.querySelector("#weatherForecast");
     
     let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
@@ -44,8 +44,14 @@ function displayForecast(day) {
 
     forecastHTML = forecastHTML + `</div>`;
     forecastElement.innerHTML = forecastHTML;
-    console.log(forecastHTML);
+}
 
+function getForecast(coordinates) {
+    let apiKey = "2465cf67c79b581f012f9a417fbb141d";
+    let units = "metric";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={part}&appid=${apiKey}&units=${units}`;
+
+    axios.get(apiUrl).then(displayForecast);
 }
 
 function displayWeather(response) {
@@ -67,6 +73,8 @@ function displayWeather(response) {
     currentTimeElement.innerHTML = formatDate(response.data.dt * 1000);
     currentIconElement.setAttribute("src",`https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     currentIconElement.setAttribute("alt",`${response.data.weather[0].description}`);
+
+    getForecast(response.data.coord);
 }
 
 function search(city) {
@@ -115,4 +123,3 @@ let celsiusLinkElement = document.querySelector("#celsius-link");
 celsiusLinkElement.addEventListener("click", displayCelsiusTemp);
 
 search("paris");
-displayForecast();
