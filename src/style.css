@@ -45,7 +45,7 @@ a {
 
 .weatherApp {
     font-family: 'Poppins', sans-serif;
-    max-width: 600px;
+    max-width: 550px;
     margin: 40px auto;
 }
 
@@ -63,6 +63,11 @@ a {
     position: relative;
     top: -15px;
     left: -20px;
+}
+
+.forecastIcon img {
+    width: 50px;
+    height: 50px;
 }
 
 .searchForm {
